@@ -1,0 +1,84 @@
+{
+  "description": "NeuroGames Tracking-System Beispieldaten",
+  "version": "1.0",
+  "tracking": [
+    {
+      "id": "track_001_1698000001",
+      "action": "app_started",
+      "timestamp": "2025-10-19T10:00:00.000Z",
+      "user": "anonymous",
+      "level": "level-1",
+      "data": {
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+        "sessionId": "session_12345"
+      }
+    },
+    {
+      "id": "track_002_1698000002",
+      "action": "navigate_to_level",
+      "timestamp": "2025-10-19T10:00:05.000Z", 
+      "user": "anonymous",
+      "level": "level-1",
+      "data": {
+        "from": "level-1",
+        "to": "level-2b"
+      }
+    },
+    {
+      "id": "track_003_1698000003",
+      "action": "register_attempt",
+      "timestamp": "2025-10-19T10:00:30.000Z",
+      "user": "anonymous", 
+      "level": "level-2b",
+      "data": {
+        "username": "TestSpieler"
+      }
+    },
+    {
+      "id": "track_004_1698000004",
+      "action": "user_registered",
+      "timestamp": "2025-10-19T10:00:35.000Z",
+      "user": "TestSpieler",
+      "level": "level-2b",
+      "data": {
+        "username": "TestSpieler",
+        "registrationSuccess": true
+      }
+    },
+    {
+      "id": "track_005_1698000005",
+      "action": "navigate_to_level",
+      "timestamp": "2025-10-19T10:00:40.000Z",
+      "user": "TestSpieler", 
+      "level": "level-3",
+      "data": {
+        "from": "level-2b",
+        "to": "level-3"
+      }
+    }
+  ],
+  "metadata": {
+    "totalEntries": 5,
+    "created": "2025-10-19T12:00:00.000Z",
+    "lastModified": "2025-10-19T12:00:00.000Z",
+    "format": "neurogames_tracking_v1"
+  },
+  "trackingTypes": {
+    "app_started": "Anwendung wurde gestartet",
+    "navigate_to_level": "Navigation zwischen Ebenen",
+    "login_attempt": "Login-Versuch",
+    "user_login": "Erfolgreicher Login",
+    "login_failed": "Fehlgeschlagener Login",
+    "register_attempt": "Registrierungs-Versuch", 
+    "user_registered": "Erfolgreiche Registrierung",
+    "user_logout": "Benutzer-Abmeldung",
+    "game_started": "Spiel gestartet",
+    "game_finished": "Spiel beendet",
+    "score_achieved": "Punkte erreicht",
+    "level_completed": "Level abgeschlossen",
+    "button_clicked": "Button geklickt",
+    "form_submitted": "Formular abgesendet",
+    "data_exported": "Daten exportiert",
+    "data_imported": "Daten importiert"
+  }
+}

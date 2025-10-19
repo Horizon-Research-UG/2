@@ -1,0 +1,49 @@
+# GitHub Pages Configuration for NeuroGames
+
+# Site settings
+title: "NeuroGames - Interactive Learning Platform"
+description: "Modern educational platform for mathematics training with comprehensive analytics and progress tracking"
+url: "https://horizon-research-ug.github.io"
+baseurl: "/2"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# GitHub Pages specific settings
+github:
+  repository_name: "2"
+  owner_name: "Horizon-Research-UG"
+
+# SEO and metadata
+lang: "en"
+author: "Horizon Research UG"
+logo: "/assets/icon-192x192.png"
+
+# Social media and sharing
+twitter:
+  username: "HorizonResearchUG"
+
+# Analytics (if needed)
+google_analytics: # Add GA tracking ID if needed
+
+# Exclude files from build
+exclude:
+  - "README.md"
+  - "data/"
+  - ".gitignore"
+  - "*.log"
+
+# Include files in build
+include:
+  - "_headers"
+  - "_redirects"
+
+# Custom plugins (GitHub Pages supported)
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Custom variables
+version: "1.0"
+release_date: "2025-10-19"

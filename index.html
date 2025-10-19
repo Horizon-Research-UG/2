@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <!-- Primary Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroGames - Interaktive Lernplattform für Mathematik</title>
+    <meta name="title" content="NeuroGames - Interaktive Lernplattform für Mathematik">
+    <meta name="description" content="Moderne Lernplattform mit interaktiven Mathematikspielen, umfassender Fortschrittsanalyse und Datenexport. Kostenlos spielen und lernen!">
+    <meta name="keywords" content="Mathematik, Lernen, Spiele, Bildung, NeuroGames, Addition, Training, Fortschritt, Statistiken">
+    <meta name="author" content="Horizon Research UG">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://horizon-research-ug.github.io/2/">
+    <meta property="og:title" content="NeuroGames - Interaktive Lernplattform für Mathematik">
+    <meta property="og:description" content="Moderne Lernplattform mit interaktiven Mathematikspielen, umfassender Fortschrittsanalyse und Datenexport.">
+    <meta property="og:image" content="https://horizon-research-ug.github.io/2/assets/og-image.png">
+    <meta property="og:site_name" content="NeuroGames">
+    <meta property="og:locale" content="de_DE">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://horizon-research-ug.github.io/2/">
+    <meta property="twitter:title" content="NeuroGames - Interaktive Lernplattform für Mathematik">
+    <meta property="twitter:description" content="Moderne Lernplattform mit interaktiven Mathematikspielen, umfassender Fortschrittsanalyse und Datenexport.">
+    <meta property="twitter:image" content="https://horizon-research-ug.github.io/2/assets/twitter-image.png">
+    
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#667eea">
+    <meta name="msapplication-TileColor" content="#667eea">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "NeuroGames",
+      "description": "Interaktive Lernplattform für Mathematik mit Spielen, Statistiken und Fortschrittsanalyse",
+      "url": "https://horizon-research-ug.github.io/2/",
+      "author": {
+        "@type": "Organization",
+        "name": "Horizon Research UG"
+      },
+      "applicationCategory": "Educational Game",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "featureList": [
+        "Interaktive Mathematikspiele",
+        "Fortschrittsanalyse",
+        "Datenexport",
+        "Achievement System",
+        "Responsive Design"
+      ]
+    }
+    </script>
+    
+    <!-- CSS-Stylesheet für einheitliches Design einbinden -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hauptcontainer für die gesamte Anwendung -->
+    <div id="app-container">
+        
+        <!-- Header-Bereich mit Logo und Navigation -->
+        <header id="main-header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-icon">🧠</div>
+                    <div class="logo-text">
+                        <h1 id="app-title">NeuroGames</h1>
+                        <p id="app-subtitle">Interaktive Lernspiele & Quest-System</p>
+                    </div>
+                </div>
+                <div class="header-info">
+                    <div class="version-badge">v1.0</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hauptinhaltsbereich - hier werden alle Ebenen geladen -->
+        <main id="main-content">
+            
+            <!-- EBENE 1: Einloggen und Registrieren (Startseite) -->
+            <section id="level-1" class="game-level active">
+                <div class="level-container welcome-container">
+                    <!-- Willkommens-Sektion mit animiertem Icon -->
+                    <div class="welcome-header">
+                        <div class="welcome-icon-large">🎮</div>
+                        <h2 class="welcome-title">Willkommen bei NeuroGames</h2>
+                        <p class="welcome-description">
+                            Deine interaktive Lernplattform mit Spielen, Quests und individuellen Herausforderungen.
+                            <br>Melde dich an oder registriere dich, um zu beginnen.
+                        </p>
+                    </div>
+                    
+                    <!-- Feature-Highlights -->
+                    <div class="feature-highlights">
+                        <div class="feature-item">
+                            <div class="feature-icon">🧠</div>
+                            <span>Lernspiele</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">📋</div>
+                            <span>Quest-System</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">📊</div>
+                            <span>Fortschritt</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🏆</div>
+                            <span>Erfolge</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Verbesserte Button-Gruppe mit Icons und Beschreibungen -->
+                    <div class="main-actions">
+                        <!-- Login-Option -->
+                        <div class="action-card" onclick="showLevel('level-2a')">
+                            <div class="action-icon">🔑</div>
+                            <div class="action-content">
+                                <h3>Einloggen</h3>
+                                <p>Bereits registriert? Melde dich mit deinen Zugangsdaten an.</p>
+                            </div>
+                            <div class="action-arrow">→</div>
+                        </div>
+                        
+                        <!-- Registrierungs-Option -->
+                        <div class="action-card" onclick="showLevel('level-2b')">
+                            <div class="action-icon">📝</div>
+                            <div class="action-content">
+                                <h3>Registrieren</h3>
+                                <p>Neu hier? Erstelle kostenlos ein Konto und starte sofort.</p>
+                            </div>
+                            <div class="action-arrow">→</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Info-Bereich -->
+                    <div class="info-section">
+                        <div class="info-item">
+                            <span class="info-icon">🔒</span>
+                            <span>Sichere lokale Speicherung</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">📱</span>
+                            <span>Funktioniert auf allen Geräten</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">🎯</span>
+                            <span>Personalisiertes Lernen</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EBENE 2A: Einloggen Formular -->
+            <section id="level-2a" class="game-level hidden">
+                <div class="level-container form-container">
+                    <!-- Form-Header -->
+                    <div class="form-header">
+                        <div class="form-icon">🔑</div>
+                        <h2>Willkommen zurück!</h2>
+                        <p class="form-subtitle">Melde dich mit deinen Zugangsdaten an</p>
+                    </div>
+                    
+                    <!-- Login-Formular -->
+                    <form id="login-form" class="modern-form">
+                        <!-- Name Eingabefeld -->
+                        <div class="input-group">
+                            <label for="login-name">
+                                <span class="label-icon">👤</span>
+                                <span class="label-text">Benutzername</span>
+                            </label>
+                            <div class="input-wrapper">
+                                <input type="text" id="login-name" name="name" required 
+                                       placeholder="Dein Benutzername" maxlength="50"
+                                       autocomplete="username">
+                                <div class="input-icon">👤</div>
+                            </div>
+                            <div class="input-feedback" id="login-name-feedback"></div>
+                        </div>
+                        
+                        <!-- Zauberwort (Passwort) Eingabefeld -->
+                        <div class="input-group">
+                            <label for="login-password">
+                                <span class="label-icon">🔐</span>
+                                <span class="label-text">Zauberwort</span>
+                            </label>
+                            <div class="input-wrapper">
+                                <input type="password" id="login-password" name="password" required 
+                                       placeholder="Dein geheimes Zauberwort" maxlength="100"
+                                       autocomplete="current-password">
+                                <div class="input-icon">🔐</div>
+                                <button type="button" class="password-toggle" onclick="togglePassword('login-password')">
+                                    👁️
+                                </button>
+                            </div>
+                            <div class="input-feedback" id="login-password-feedback"></div>
+                        </div>
+                        
+                        <!-- Login-Optionen -->
+                        <div class="form-options">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="remember-me">
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">Angemeldet bleiben</span>
+                            </label>
+                        </div>
+                        
+                        <!-- Button-Gruppe für Aktionen -->
+                        <div class="form-actions">
+                            <button type="submit" class="primary-form-button" id="login-submit-btn">
+                                <span class="button-icon">✨</span>
+                                <span class="button-text">Einloggen</span>
+                                <div class="button-loader hidden">⭐</div>
+                            </button>
+                        </div>
+                        
+                        <!-- Alternative Aktionen -->
+                        <div class="form-alternatives">
+                            <p>Noch kein Konto?</p>
+                            <button type="button" class="link-button" onclick="showLevel('level-2b')">
+                                📝 Jetzt registrieren
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <!-- Navigation -->
+                    <div class="form-navigation">
+                        <button type="button" class="back-navigation" onclick="showLevel('level-1')">
+                            <span class="nav-icon">←</span>
+                            <span class="nav-text">Zurück zur Startseite</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EBENE 2B: Registrieren Formular -->
+            <section id="level-2b" class="game-level hidden">
+                <div class="level-container form-container">
+                    <!-- Form-Header -->
+                    <div class="form-header">
+                        <div class="form-icon">📝</div>
+                        <h2>Willkommen bei NeuroGames!</h2>
+                        <p class="form-subtitle">Erstelle dein kostenloses Konto und starte deine Lernreise</p>
+                    </div>
+                    
+                    <!-- Registrierungs-Formular -->
+                    <form id="register-form" class="modern-form">
+                        <!-- Name Eingabefeld -->
+                        <div class="input-group">
+                            <label for="register-name">
+                                <span class="label-icon">👤</span>
+                                <span class="label-text">Benutzername wählen</span>
+                            </label>
+                            <div class="input-wrapper">
+                                <input type="text" id="register-name" name="name" required 
+                                       placeholder="Wähle einen einzigartigen Namen" maxlength="50"
+                                       autocomplete="username">
+                                <div class="input-icon">👤</div>
+                                <div class="availability-check hidden" id="name-availability">✅</div>
+                            </div>
+                            <div class="input-feedback" id="register-name-feedback"></div>
+                            <div class="input-hint">3-50 Zeichen, nur Buchstaben und Zahlen</div>
+                        </div>
+                        
+                        <!-- Zauberwort (Passwort) Eingabefeld -->
+                        <div class="input-group">
+                            <label for="register-password">
+                                <span class="label-icon">🔐</span>
+                                <span class="label-text">Zauberwort erstellen</span>
+                            </label>
+                            <div class="input-wrapper">
+                                <input type="password" id="register-password" name="password" required 
+                                       placeholder="Erstelle ein sicheres Zauberwort" maxlength="100"
+                                       autocomplete="new-password">
+                                <div class="input-icon">🔐</div>
+                                <button type="button" class="password-toggle" onclick="togglePassword('register-password')">
+                                    👁️
+                                </button>
+                            </div>
+                            <div class="input-feedback" id="register-password-feedback"></div>
+                            
+                            <!-- Passwort-Stärke Anzeiger -->
+                            <div class="password-strength">
+                                <div class="strength-label">Zauberwort-Stärke:</div>
+                                <div class="strength-bar">
+                                    <div class="strength-fill" id="password-strength-fill"></div>
+                                </div>
+                                <div class="strength-text" id="password-strength-text">Sehr schwach</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Zauberwort bestätigen -->
+                        <div class="input-group">
+                            <label for="register-confirm">
+                                <span class="label-icon">🔒</span>
+                                <span class="label-text">Zauberwort bestätigen</span>
+                            </label>
+                            <div class="input-wrapper">
+                                <input type="password" id="register-confirm" name="confirm" required 
+                                       placeholder="Wiederhole dein Zauberwort" maxlength="100"
+                                       autocomplete="new-password">
+                                <div class="input-icon">🔒</div>
+                                <div class="match-indicator hidden" id="password-match">✅</div>
+                            </div>
+                            <div class="input-feedback" id="register-confirm-feedback"></div>
+                        </div>
+                        
+                        <!-- Registrierungs-Optionen -->
+                        <div class="form-options">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="terms-agreement" required>
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">Ich stimme den Nutzungsbedingungen zu</span>
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="privacy-agreement" required>
+                                <span class="checkmark"></span>
+                                <span class="checkbox-text">Ich habe die Datenschutzerklärung gelesen</span>
+                            </label>
+                        </div>
+                        
+                        <!-- Button-Gruppe für Aktionen -->
+                        <div class="form-actions">
+                            <button type="submit" class="primary-form-button" id="register-submit-btn" disabled>
+                                <span class="button-icon">🎉</span>
+                                <span class="button-text">Konto erstellen</span>
+                                <div class="button-loader hidden">⭐</div>
+                            </button>
+                        </div>
+                        
+                        <!-- Alternative Aktionen -->
+                        <div class="form-alternatives">
+                            <p>Bereits registriert?</p>
+                            <button type="button" class="link-button" onclick="showLevel('level-2a')">
+                                🔑 Jetzt anmelden
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <!-- Navigation -->
+                    <div class="form-navigation">
+                        <button type="button" class="back-navigation" onclick="showLevel('level-1')">
+                            <span class="nav-icon">←</span>
+                            <span class="nav-text">Zurück zur Startseite</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EBENE 3: Hauptmenü (wird nach Login/Registrierung gezeigt) -->
+            <section id="level-3" class="game-level hidden">
+                <div class="level-container dashboard-container">
+                    
+                    <!-- Dashboard-Header -->
+                    <div class="dashboard-header">
+                        <div class="user-welcome">
+                            <div class="avatar-container">
+                                <div class="user-avatar">🧠</div>
+                                <div class="online-indicator"></div>
+                            </div>
+                            <div class="user-info">
+                                <h2>Willkommen zurück!</h2>
+                                <p class="user-greeting">
+                                    Hallo <span id="user-name-display" class="username"></span>, 
+                                    bereit für neue Herausforderungen? 
+                                </p>
+                            </div>
+                        </div>
+                        <div class="quick-stats">
+                            <div class="stat-item">
+                                <div class="stat-icon">🎮</div>
+                                <div class="stat-info">
+                                    <span class="stat-value" id="games-played">0</span>
+                                    <span class="stat-label">Spiele</span>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-icon">🏆</div>
+                                <div class="stat-info">
+                                    <span class="stat-value" id="best-score">0</span>
+                                    <span class="stat-label">Rekord</span>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-icon">📋</div>
+                                <div class="stat-info">
+                                    <span class="stat-value" id="active-quests">3</span>
+                                    <span class="stat-label">Quests</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quest-Übersichtsboard -->
+                    <div class="quest-board">
+                        <div class="section-header">
+                            <h3>📋 Aktuelle Quests & Aufgaben</h3>
+                            <button class="manage-quests-btn" onclick="showQuestManager()">
+                                ⚙️ Verwalten
+                            </button>
+                        </div>
+                        <div class="quest-list" id="quest-list">
+                            <!-- Beispiel Quest-Items -->
+                            <div class="quest-item active">
+                                <div class="quest-info">
+                                    <div class="quest-title">📚 Erd Addition meistern</div>
+                                    <div class="quest-description">Erreiche 100 Punkte im Erd Addition Spiel</div>
+                                    <div class="quest-deadline">📅 Bis: 25.10.2025</div>
+                                </div>
+                                <div class="quest-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 65%"></div>
+                                    </div>
+                                    <span class="progress-text">65/100</span>
+                                </div>
+                            </div>
+                            
+                            <div class="quest-item pending">
+                                <div class="quest-info">
+                                    <div class="quest-title">📝 Lernnotizen erstellen</div>
+                                    <div class="quest-description">Erstelle 5 Lernnotizen zu verschiedenen Themen</div>
+                                    <div class="quest-deadline">📅 Bis: 30.10.2025</div>
+                                </div>
+                                <div class="quest-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 20%"></div>
+                                    </div>
+                                    <span class="progress-text">1/5</span>
+                                </div>
+                            </div>
+
+                            <div class="quest-item completed">
+                                <div class="quest-info">
+                                    <div class="quest-title">🎯 Erstes Spiel abschließen</div>
+                                    <div class="quest-description">Beende dein erstes Spiel erfolgreich</div>
+                                    <div class="quest-deadline">✅ Abgeschlossen</div>
+                                </div>
+                                <div class="quest-status">
+                                    <span class="completion-badge">✅ Erledigt</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Anpassbares Hauptboard -->
+                    <div class="main-board">
+                        <div class="section-header">
+                            <h3>🎯 Dein Dashboard</h3>
+                            <button class="customize-btn" onclick="showDashboardCustomizer()">
+                                🎨 Anpassen
+                            </button>
+                        </div>
+                        
+                        <!-- Module-Grid (anpassbar) -->
+                        <div class="modules-grid" id="modules-grid">
+                            
+                            <!-- Spielen Modul -->
+                            <div class="dashboard-module games-module" onclick="showLevel('level-3a')">
+                                <div class="module-header">
+                                    <div class="module-icon">🎮</div>
+                                    <div class="module-title">Spielen</div>
+                                    <div class="module-badge">3 Games</div>
+                                </div>
+                                <div class="module-content">
+                                    <p>Starte deine Lernreise mit interaktiven Spielen</p>
+                                    <div class="module-stats">
+                                        <span>🔥 Streak: 5 Tage</span>
+                                    </div>
+                                </div>
+                                <div class="module-action">
+                                    <span class="action-text">Spielen →</span>
+                                </div>
+                            </div>
+
+                            <!-- Tools Modul -->
+                            <div class="dashboard-module tools-module" onclick="showLevel('level-tools')">
+                                <div class="module-header">
+                                    <div class="module-icon">🔧</div>
+                                    <div class="module-title">Tools</div>
+                                    <div class="module-badge">Neu</div>
+                                </div>
+                                <div class="module-content">
+                                    <p>Nützliche Werkzeuge und Funktionen für effektives Lernen</p>
+                                    <div class="module-stats">
+                                        <span>📁 Upload-Center</span>
+                                    </div>
+                                </div>
+                                <div class="module-action">
+                                    <span class="action-text">Öffnen →</span>
+                                </div>
+                            </div>
+
+                            <!-- Archiv Modul -->
+                            <div class="dashboard-module archive-module" onclick="showLevel('level-5')">
+                                <div class="module-header">
+                                    <div class="module-icon">📊</div>
+                                    <div class="module-title">Archiv</div>
+                                    <div class="module-badge" id="total-results">0 Ergebnisse</div>
+                                </div>
+                                <div class="module-content">
+                                    <p>Deine Ergebnisse, Statistiken und Fortschritte</p>
+                                    <div class="module-stats">
+                                        <span>📈 Verbesserung: +15%</span>
+                                    </div>
+                                </div>
+                                <div class="module-action">
+                                    <span class="action-text">Anzeigen →</span>
+                                </div>
+                            </div>
+
+                            <!-- Quest-Manager Modul -->
+                            <div class="dashboard-module quest-module" onclick="showQuestManager()">
+                                <div class="module-header">
+                                    <div class="module-icon">📋</div>
+                                    <div class="module-title">Quest-Manager</div>
+                                    <div class="module-badge">3 Aktiv</div>
+                                </div>
+                                <div class="module-content">
+                                    <p>Erstelle und verwalte deine persönlichen Lernziele</p>
+                                    <div class="module-stats">
+                                        <span>🎯 66% Abgeschlossen</span>
+                                    </div>
+                                </div>
+                                <div class="module-action">
+                                    <span class="action-text">Verwalten →</span>
+                                </div>
+                            </div>
+
+                            <!-- Fortschritt Modul -->
+                            <div class="dashboard-module progress-module" onclick="showProgressOverview()">
+                                <div class="module-header">
+                                    <div class="module-icon">📈</div>
+                                    <div class="module-title">Fortschritt</div>
+                                    <div class="module-badge">Level 3</div>
+                                </div>
+                                <div class="module-content">
+                                    <p>Dein Lernfortschritt und Achievements im Überblick</p>
+                                    <div class="progress-preview">
+                                        <div class="level-progress-bar">
+                                            <div class="level-progress-fill" style="width: 68%"></div>
+                                        </div>
+                                        <span class="level-text">68% zu Level 4</span>
+                                    </div>
+                                </div>
+                                <div class="module-action">
+                                    <span class="action-text">Details →</span>
+                                </div>
+                            </div>
+
+                            <!-- Vorschläge Modul -->
+                            <div class="dashboard-module suggestions-module" onclick="showLevel('level-3a1')">
+                                <div class="module-header">
+                                    <div class="module-icon">💡</div>
+                                    <div class="module-title">Vorschläge</div>
+                                    <div class="module-badge">Community</div>
+                                </div>
+                                <div class="module-content">
+                                    <p>Teile Ideen und nimm an Community-Features teil</p>
+                                    <div class="module-stats">
+                                        <span>💬 5 neue Umfragen</span>
+                                    </div>
+                                </div>
+                                <div class="module-action">
+                                    <span class="action-text">Teilnehmen →</span>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <!-- Dashboard-Footer -->
+                    <div class="dashboard-footer">
+                        <div class="footer-stats">
+                            <div class="footer-stat">
+                                <span class="stat-icon">⏰</span>
+                                <span class="stat-text">Letzte Aktivität: <span id="last-activity">Heute</span></span>
+                            </div>
+                            <div class="footer-stat">
+                                <span class="stat-icon">🔥</span>
+                                <span class="stat-text">Streak: <span id="daily-streak">5 Tage</span></span>
+                            </div>
+                        </div>
+                        <div class="footer-actions">
+                            <button class="settings-button" onclick="showSettings()">
+                                ⚙️ Einstellungen
+                            </button>
+                            <button class="logout-button" onclick="logout()">
+                                🚪 Ausloggen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Platzhalter für weitere Ebenen (werden in nachfolgenden Tickets implementiert) -->
+            
+            <!-- EBENE 3A: Spielbereich -->
+            <section id="level-3a" class="game-level hidden">
+                <div class="level-container games-container">
+                    
+                    <!-- Games-Header -->
+                    <div class="games-header">
+                        <div class="header-content">
+                            <div class="games-title">
+                                <h2>🎮 Spielbereich</h2>
+                                <p class="games-subtitle">Wähle ein Spiel und starte dein Lernabenteuer!</p>
+                            </div>
+                            <div class="games-stats">
+                                <div class="games-stat-item">
+                                    <div class="stat-icon">🏆</div>
+                                    <div class="stat-info">
+                                        <span class="stat-number" id="total-games-played">0</span>
+                                        <span class="stat-label">Gespielte Runden</span>
+                                    </div>
+                                </div>
+                                <div class="games-stat-item">
+                                    <div class="stat-icon">⭐</div>
+                                    <div class="stat-info">
+                                        <span class="stat-number" id="average-score">0</span>
+                                        <span class="stat-label">Durchschnitt</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Spiele-Grid -->
+                    <div class="games-grid">
+                        
+                        <!-- Game 1 - Erd Addition (Hauptspiel) -->
+                        <div class="game-card featured" onclick="startGame('erd-addition')">
+                            <div class="game-badge featured-badge">⭐ Hauptspiel</div>
+                            <div class="game-icon">🌍</div>
+                            <div class="game-info">
+                                <h3 class="game-title">Erd Addition</h3>
+                                <p class="game-description">Meistere mathematische Aufgaben mit Erdkunde-Bezug. Addiere Zahlen und entdecke die Welt!</p>
+                                <div class="game-features">
+                                    <span class="feature-tag">🧮 Mathematik</span>
+                                    <span class="feature-tag">🌍 Erdkunde</span>
+                                    <span class="feature-tag">🎯 Fokus</span>
+                                </div>
+                            </div>
+                            <div class="game-stats">
+                                <div class="game-stat">
+                                    <span class="stat-label">Bester Score:</span>
+                                    <span class="stat-value" id="erd-best-score">0</span>
+                                </div>
+                                <div class="game-stat">
+                                    <span class="stat-label">Gespielt:</span>
+                                    <span class="stat-value" id="erd-play-count">0x</span>
+                                </div>
+                                <div class="game-progress">
+                                    <div class="progress-label">Fortschritt</div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" id="erd-progress" style="width: 45%"></div>
+                                    </div>
+                                    <span class="progress-text">Level 3 - 45%</span>
+                                </div>
+                            </div>
+                            <div class="game-action">
+                                <button class="play-button">
+                                    <span class="button-icon">🚀</span>
+                                    <span class="button-text">Jetzt spielen</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Game 2 - Memory Challenge -->
+                        <div class="game-card" onclick="startGame('memory-challenge')">
+                            <div class="game-badge coming-soon">🔜 Bald</div>
+                            <div class="game-icon">🧠</div>
+                            <div class="game-info">
+                                <h3 class="game-title">Memory Challenge</h3>
+                                <p class="game-description">Trainiere dein Gedächtnis mit verschiedenen Schwierigkeitsstufen und Themen.</p>
+                                <div class="game-features">
+                                    <span class="feature-tag">🧠 Gedächtnis</span>
+                                    <span class="feature-tag">⚡ Reaktion</span>
+                                    <span class="feature-tag">🎨 Kreativ</span>
+                                </div>
+                            </div>
+                            <div class="game-stats">
+                                <div class="game-stat">
+                                    <span class="stat-label">Bester Score:</span>
+                                    <span class="stat-value">---</span>
+                                </div>
+                                <div class="game-stat">
+                                    <span class="stat-label">Gespielt:</span>
+                                    <span class="stat-value">---</span>
+                                </div>
+                                <div class="game-preview">
+                                    <p>Spiel wird bald freigeschaltet!</p>
+                                </div>
+                            </div>
+                            <div class="game-action">
+                                <button class="play-button disabled" disabled>
+                                    <span class="button-icon">🔒</span>
+                                    <span class="button-text">Bald verfügbar</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Game 3 - Quiz Master -->
+                        <div class="game-card" onclick="startGame('quiz-master')">
+                            <div class="game-badge coming-soon">🔜 Bald</div>
+                            <div class="game-icon">❓</div>
+                            <div class="game-info">
+                                <h3 class="game-title">Quiz Master</h3>
+                                <p class="game-description">Teste dein Wissen in verschiedenen Kategorien mit interaktiven Quiz-Fragen.</p>
+                                <div class="game-features">
+                                    <span class="feature-tag">📚 Wissen</span>
+                                    <span class="feature-tag">⚡ Schnell</span>
+                                    <span class="feature-tag">🏆 Wettkampf</span>
+                                </div>
+                            </div>
+                            <div class="game-stats">
+                                <div class="game-stat">
+                                    <span class="stat-label">Bester Score:</span>
+                                    <span class="stat-value">---</span>
+                                </div>
+                                <div class="game-stat">
+                                    <span class="stat-label">Gespielt:</span>
+                                    <span class="stat-value">---</span>
+                                </div>
+                                <div class="game-preview">
+                                    <p>Spiel wird bald freigeschaltet!</p>
+                                </div>
+                            </div>
+                            <div class="game-action">
+                                <button class="play-button disabled" disabled>
+                                    <span class="button-icon">🔒</span>
+                                    <span class="button-text">Bald verfügbar</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Vorschläge-Karte -->
+                        <div class="game-card suggestions-card" onclick="showLevel('level-3a1')">
+                            <div class="game-badge community-badge">👥 Community</div>
+                            <div class="game-icon">💡</div>
+                            <div class="game-info">
+                                <h3 class="game-title">Vorschläge machen</h3>
+                                <p class="game-description">Teile deine Ideen mit der Community und nimm an Umfragen teil.</p>
+                                <div class="game-features">
+                                    <span class="feature-tag">📝 Ideen</span>
+                                    <span class="feature-tag">📁 Upload</span>
+                                    <span class="feature-tag">📊 Umfragen</span>
+                                </div>
+                            </div>
+                            <div class="community-stats">
+                                <div class="community-stat">
+                                    <span class="stat-icon">💭</span>
+                                    <span class="stat-text">3 neue Umfragen</span>
+                                </div>
+                                <div class="community-stat">
+                                    <span class="stat-icon">📝</span>
+                                    <span class="stat-text">12 aktive Vorschläge</span>
+                                </div>
+                            </div>
+                            <div class="game-action">
+                                <button class="community-button">
+                                    <span class="button-icon">🚀</span>
+                                    <span class="button-text">Mitmachen</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div class="games-navigation">
+                        <button class="back-navigation" onclick="showLevel('level-3')">
+                            <span class="nav-icon">←</span>
+                            <span class="nav-text">Zurück zum Dashboard</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EBENE 3A1: Vorschläge machen -->
+            <section id="level-3a1" class="game-level hidden">
+                <div class="level-container suggestions-container">
+                    
+                    <!-- Suggestions-Header -->
+                    <div class="suggestions-header">
+                        <div class="header-icon">💡</div>
+                        <h2>Community Vorschläge</h2>
+                        <p class="suggestions-subtitle">Teile deine Ideen und nimm an der Community teil!</p>
+                    </div>
+
+                    <!-- Suggestion-Tabs -->
+                    <div class="suggestion-tabs">
+                        <button class="tab-button active" onclick="showSuggestionTab('text')">
+                            <span class="tab-icon">📝</span>
+                            <span class="tab-text">Text schreiben</span>
+                        </button>
+                        <button class="tab-button" onclick="showSuggestionTab('file')">
+                            <span class="tab-icon">📁</span>
+                            <span class="tab-text">Datei hochladen</span>
+                        </button>
+                        <button class="tab-button" onclick="showSuggestionTab('folder')">
+                            <span class="tab-icon">📂</span>
+                            <span class="tab-text">Ordner hochladen</span>
+                        </button>
+                        <button class="tab-button" onclick="showSuggestionTab('survey')">
+                            <span class="tab-icon">📊</span>
+                            <span class="tab-text">Umfrage teilnehmen</span>
+                        </button>
+                    </div>
+
+                    <!-- Tab-Inhalte -->
+                    <div class="suggestion-content">
+                        
+                        <!-- Text schreiben Tab -->
+                        <div id="text-tab" class="tab-content active">
+                            <div class="suggestion-form">
+                                <h3>✍️ Textvorschlag erstellen</h3>
+                                <form id="text-suggestion-form">
+                                    <div class="input-group">
+                                        <label for="suggestion-title">
+                                            <span class="label-icon">📋</span>
+                                            <span class="label-text">Titel des Vorschlags</span>
+                                        </label>
+                                        <input type="text" id="suggestion-title" placeholder="z.B. Neue Spielidee für Mathematik" maxlength="100" required>
+                                    </div>
+                                    
+                                    <div class="input-group">
+                                        <label for="suggestion-category">
+                                            <span class="label-icon">🏷️</span>
+                                            <span class="label-text">Kategorie</span>
+                                        </label>
+                                        <select id="suggestion-category" required>
+                                            <option value="">Kategorie wählen</option>
+                                            <option value="games">🎮 Neue Spiele</option>
+                                            <option value="features">⚙️ Neue Features</option>
+                                            <option value="design">🎨 Design-Verbesserungen</option>
+                                            <option value="content">📚 Lerninhalte</option>
+                                            <option value="other">🔧 Sonstiges</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="input-group">
+                                        <label for="suggestion-text">
+                                            <span class="label-icon">💭</span>
+                                            <span class="label-text">Dein Vorschlag</span>
+                                        </label>
+                                        <textarea id="suggestion-text" placeholder="Beschreibe deine Idee detailliert..." rows="6" maxlength="1000" required></textarea>
+                                        <div class="character-counter">
+                                            <span id="char-count">0</span>/1000 Zeichen
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-actions">
+                                        <button type="submit" class="submit-suggestion-btn">
+                                            <span class="button-icon">🚀</span>
+                                            <span class="button-text">Vorschlag einreichen</span>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Datei hochladen Tab -->
+                        <div id="file-tab" class="tab-content">
+                            <div class="upload-section">
+                                <h3>📁 Dokument hochladen</h3>
+                                <div class="upload-area" id="file-upload-area">
+                                    <div class="upload-icon">📄</div>
+                                    <div class="upload-text">
+                                        <p>Klicke hier oder ziehe eine Datei hinein</p>
+                                        <p class="upload-hint">Unterstützte Formate: PDF, DOC, TXT, PNG, JPG (max. 10MB)</p>
+                                    </div>
+                                    <input type="file" id="file-input" accept=".pdf,.doc,.docx,.txt,.png,.jpg,.jpeg" hidden>
+                                </div>
+                                <div class="upload-info">
+                                    <div class="info-item">
+                                        <span class="info-icon">🔒</span>
+                                        <span>Deine Dateien werden sicher gespeichert</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-icon">👥</span>
+                                        <span>Teile Lerninhalte mit der Community</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ordner hochladen Tab -->
+                        <div id="folder-tab" class="tab-content">
+                            <div class="upload-section">
+                                <h3>📂 Ordner hochladen</h3>
+                                <div class="upload-area" id="folder-upload-area">
+                                    <div class="upload-icon">📂</div>
+                                    <div class="upload-text">
+                                        <p>Klicke hier oder ziehe einen Ordner hinein</p>
+                                        <p class="upload-hint">Organisiere und teile komplette Lernmaterialien</p>
+                                    </div>
+                                    <input type="file" id="folder-input" webkitdirectory hidden>
+                                </div>
+                                <div class="upload-info">
+                                    <div class="info-item">
+                                        <span class="info-icon">📋</span>
+                                        <span>Behalte die Ordnerstruktur bei</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-icon">🎯</span>
+                                        <span>Perfekt für Themenkomplexe</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Umfrage teilnehmen Tab -->
+                        <div id="survey-tab" class="tab-content">
+                            <div class="survey-section">
+                                <h3>📊 Aktuelle Umfragen</h3>
+                                
+                                <!-- Beispiel-Umfrage 1 -->
+                                <div class="survey-item">
+                                    <div class="survey-header">
+                                        <h4>🎮 Welches Spiel soll als nächstes entwickelt werden?</h4>
+                                        <span class="survey-deadline">Läuft bis: 30.10.2025</span>
+                                    </div>
+                                    <div class="survey-options">
+                                        <label class="survey-option">
+                                            <input type="radio" name="survey1" value="physics">
+                                            <span class="option-text">🔬 Physik-Simulator</span>
+                                            <span class="vote-count">23 Stimmen</span>
+                                        </label>
+                                        <label class="survey-option">
+                                            <input type="radio" name="survey1" value="language">
+                                            <span class="option-text">🗣️ Sprachen-Trainer</span>
+                                            <span class="vote-count">31 Stimmen</span>
+                                        </label>
+                                        <label class="survey-option">
+                                            <input type="radio" name="survey1" value="history">
+                                            <span class="option-text">🏛️ Geschichte-Quiz</span>
+                                            <span class="vote-count">18 Stimmen</span>
+                                        </label>
+                                    </div>
+                                    <button class="vote-button" onclick="submitVote('survey1')">
+                                        <span class="button-icon">🗳️</span>
+                                        <span class="button-text">Abstimmen</span>
+                                    </button>
+                                </div>
+
+                                <!-- Beispiel-Umfrage 2 -->
+                                <div class="survey-item">
+                                    <div class="survey-header">
+                                        <h4>🎨 Welches Design-Theme gefällt dir am besten?</h4>
+                                        <span class="survey-deadline">Läuft bis: 25.10.2025</span>
+                                    </div>
+                                    <div class="survey-options">
+                                        <label class="survey-option">
+                                            <input type="radio" name="survey2" value="dark">
+                                            <span class="option-text">🌙 Dunkles Theme</span>
+                                            <span class="vote-count">45 Stimmen</span>
+                                        </label>
+                                        <label class="survey-option">
+                                            <input type="radio" name="survey2" value="light">
+                                            <span class="option-text">☀️ Helles Theme</span>
+                                            <span class="vote-count">52 Stimmen</span>
+                                        </label>
+                                        <label class="survey-option">
+                                            <input type="radio" name="survey2" value="auto">
+                                            <span class="option-text">🔄 Automatisch</span>
+                                            <span class="vote-count">28 Stimmen</span>
+                                        </label>
+                                    </div>
+                                    <button class="vote-button" onclick="submitVote('survey2')">
+                                        <span class="button-icon">🗳️</span>
+                                        <span class="button-text">Abstimmen</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div class="suggestions-navigation">
+                        <button class="back-navigation" onclick="showLevel('level-3a')">
+                            <span class="nav-icon">←</span>
+                            <span class="nav-text">Zurück zum Spielbereich</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EBENE 3A1: Vorschläge machen -->
+            
+            <!-- EBENE 4: Erd Addition Spiel -->
+            <section id="level-4" class="level game-level hidden">
+                <div class="container">
+                    <div class="level-header">
+                        <button class="back-button" onclick="showLevel('level-3a')">
+                            <span class="button-icon">←</span>
+                            <span class="button-text">Zurück zum Spielbereich</span>
+                        </button>
+                        <h1>🌍 Erd Addition</h1>
+                        <p class="level-subtitle">Mathematik-Training mit der Erde als Spielfeld</p>
+                    </div>
+
+                    <!-- Spiel-Status Anzeige -->
+                    <div class="game-status">
+                        <div class="status-grid">
+                            <div class="status-item">
+                                <span class="status-label">⏱️ Zeit</span>
+                                <span class="status-value" id="game-timer">00:00</span>
+                            </div>
+                            <div class="status-item">
+                                <span class="status-label">🎯 Punkte</span>
+                                <span class="status-value" id="game-score">0</span>
+                            </div>
+                            <div class="status-item">
+                                <span class="status-label">✅ Richtig</span>
+                                <span class="status-value" id="correct-count">0</span>
+                            </div>
+                            <div class="status-item">
+                                <span class="status-label">❌ Falsch</span>
+                                <span class="status-value" id="wrong-count">0</span>
+                            </div>
+                            <div class="status-item">
+                                <span class="status-label">📊 Level</span>
+                                <span class="status-value" id="current-level">1</span>
+                            </div>
+                            <div class="status-item">
+                                <span class="status-label">🔥 Serie</span>
+                                <span class="status-value" id="streak-count">0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Haupt-Spielbereich -->
+                    <div class="game-area">
+                        <!-- Spiel-Modus Auswahl -->
+                        <div id="game-mode-selection" class="mode-selection">
+                            <h2>🎮 Spiel-Modus wählen</h2>
+                            <div class="mode-grid">
+                                <div class="mode-card" onclick="startErdAdditionGame('easy')">
+                                    <div class="mode-icon">🌱</div>
+                                    <h3>Anfänger</h3>
+                                    <p>Zahlen 1-10<br>Keine Zeitbegrenzung</p>
+                                    <div class="mode-badge easy">Einfach</div>
+                                </div>
+                                <div class="mode-card" onclick="startErdAdditionGame('medium')">
+                                    <div class="mode-icon">🌳</div>
+                                    <h3>Fortgeschritten</h3>
+                                    <p>Zahlen 1-50<br>2 Minuten Zeit</p>
+                                    <div class="mode-badge medium">Mittel</div>
+                                </div>
+                                <div class="mode-card" onclick="startErdAdditionGame('hard')">
+                                    <div class="mode-icon">🌍</div>
+                                    <h3>Experte</h3>
+                                    <p>Zahlen 1-100<br>90 Sekunden Zeit</p>
+                                    <div class="mode-badge hard">Schwer</div>
+                                </div>
+                                <div class="mode-card" onclick="startErdAdditionGame('challenge')">
+                                    <div class="mode-icon">🚀</div>
+                                    <h3>Herausforderung</h3>
+                                    <p>Zahlen 1-200<br>60 Sekunden Zeit</p>
+                                    <div class="mode-badge challenge">Extrem</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Aktives Spiel Interface -->
+                        <div id="game-interface" class="game-interface hidden">
+                            <!-- Aufgaben-Bereich -->
+                            <div class="task-area">
+                                <div class="earth-visual">
+                                    <div class="earth-sphere">
+                                        <span class="earth-emoji">🌍</span>
+                                        <div class="earth-rotation"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="math-problem">
+                                    <div class="problem-display">
+                                        <span id="first-number" class="number">5</span>
+                                        <span class="operator">+</span>
+                                        <span id="second-number" class="number">3</span>
+                                        <span class="equals">=</span>
+                                        <span class="question-mark">?</span>
+                                    </div>
+                                    
+                                    <div class="answer-input">
+                                        <input type="number" id="answer-field" placeholder="Antwort eingeben" autofocus>
+                                        <button id="submit-answer" onclick="submitAnswer()">
+                                            <span class="button-icon">✓</span>
+                                            <span class="button-text">Bestätigen</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Fortschrittsbalken -->
+                            <div class="progress-section">
+                                <div class="progress-label">
+                                    <span>Fortschritt im aktuellen Level</span>
+                                    <span id="progress-text">0/10</span>
+                                </div>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" id="level-progress"></div>
+                                </div>
+                            </div>
+
+                            <!-- Feedback-Bereich -->
+                            <div id="feedback-area" class="feedback-area">
+                                <!-- Wird dynamisch gefüllt -->
+                            </div>
+
+                            <!-- Spiel-Aktionen -->
+                            <div class="game-actions">
+                                <button class="action-button secondary" onclick="pauseGame()">
+                                    <span class="button-icon">⏸️</span>
+                                    <span class="button-text">Pause</span>
+                                </button>
+                                <button class="action-button secondary" onclick="restartGame()">
+                                    <span class="button-icon">🔄</span>
+                                    <span class="button-text">Neustart</span>
+                                </button>
+                                <button class="action-button danger" onclick="endGame()">
+                                    <span class="button-icon">🏁</span>
+                                    <span class="button-text">Beenden</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Spiel-Ende Bildschirm -->
+                        <div id="game-results" class="game-results hidden">
+                            <div class="results-card">
+                                <div class="results-header">
+                                    <div class="results-icon">🏆</div>
+                                    <h2>Spiel beendet!</h2>
+                                    <p class="results-subtitle">Hier sind deine Ergebnisse:</p>
+                                </div>
+                                
+                                <div class="results-stats">
+                                    <div class="stat-row">
+                                        <span class="stat-label">⏱️ Gespielt für:</span>
+                                        <span class="stat-value" id="final-time">0:00</span>
+                                    </div>
+                                    <div class="stat-row">
+                                        <span class="stat-label">🎯 Gesamtpunkte:</span>
+                                        <span class="stat-value" id="final-score">0</span>
+                                    </div>
+                                    <div class="stat-row">
+                                        <span class="stat-label">✅ Richtige Antworten:</span>
+                                        <span class="stat-value" id="final-correct">0</span>
+                                    </div>
+                                    <div class="stat-row">
+                                        <span class="stat-label">❌ Falsche Antworten:</span>
+                                        <span class="stat-value" id="final-wrong">0</span>
+                                    </div>
+                                    <div class="stat-row">
+                                        <span class="stat-label">📊 Erreichte Level:</span>
+                                        <span class="stat-value" id="final-level">1</span>
+                                    </div>
+                                    <div class="stat-row">
+                                        <span class="stat-label">🔥 Beste Serie:</span>
+                                        <span class="stat-value" id="final-streak">0</span>
+                                    </div>
+                                    <div class="stat-row">
+                                        <span class="stat-label">⭐ Genauigkeit:</span>
+                                        <span class="stat-value" id="final-accuracy">0%</span>
+                                    </div>
+                                </div>
+
+                                <div class="results-actions">
+                                    <button class="action-button primary" onclick="showGameModeSelection()">
+                                        <span class="button-icon">🎮</span>
+                                        <span class="button-text">Nochmal spielen</span>
+                                    </button>
+                                    <button class="action-button secondary" onclick="showLevel('level-3a')">
+                                        <span class="button-icon">📊</span>
+                                        <span class="button-text">Zur Übersicht</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EBENE 5: Archiv System -->
+            <section id="level-5" class="level game-level hidden">
+                <div class="container">
+                    <div class="level-header">
+                        <button class="back-button" onclick="showLevel('level-3')">
+                            <span class="button-icon">←</span>
+                            <span class="button-text">Zurück zum Dashboard</span>
+                        </button>
+                        <h1>📊 Archiv & Statistiken</h1>
+                        <p class="level-subtitle">Deine Spielergebnisse und Fortschrittsanalysen</p>
+                    </div>
+
+                    <!-- Archiv-Navigation -->
+                    <div class="archive-navigation">
+                        <div class="nav-tabs">
+                            <button class="tab-btn active" onclick="showArchiveTab('overview')">
+                                <span class="tab-icon">📈</span>
+                                <span class="tab-text">Übersicht</span>
+                            </button>
+                            <button class="tab-btn" onclick="showArchiveTab('results')">
+                                <span class="tab-icon">🎯</span>
+                                <span class="tab-text">Ergebnisse</span>
+                            </button>
+                            <button class="tab-btn" onclick="showArchiveTab('statistics')">
+                                <span class="tab-icon">📊</span>
+                                <span class="tab-text">Statistiken</span>
+                            </button>
+                            <button class="tab-btn" onclick="showArchiveTab('export')">
+                                <span class="tab-icon">📁</span>
+                                <span class="tab-text">Liste 5 Export</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Übersicht Tab -->
+                    <div id="overview-tab" class="archive-tab active">
+                        <div class="overview-stats">
+                            <div class="stats-grid">
+                                <div class="stat-card">
+                                    <div class="stat-icon">🎮</div>
+                                    <div class="stat-content">
+                                        <div class="stat-number" id="total-games-stat">0</div>
+                                        <div class="stat-label">Gespielte Runden</div>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon">🎯</div>
+                                    <div class="stat-content">
+                                        <div class="stat-number" id="total-score-stat">0</div>
+                                        <div class="stat-label">Gesamtpunkte</div>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon">⏱️</div>
+                                    <div class="stat-content">
+                                        <div class="stat-number" id="total-time-stat">0h 0m</div>
+                                        <div class="stat-label">Gespielzeit</div>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon">⭐</div>
+                                    <div class="stat-content">
+                                        <div class="stat-number" id="average-accuracy-stat">0%</div>
+                                        <div class="stat-label">Ø Genauigkeit</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Fortschritts-Charts Placeholder -->
+                        <div class="chart-section">
+                            <div class="chart-container">
+                                <h3>📈 Fortschritt über Zeit</h3>
+                                <div class="chart-placeholder">
+                                    <p>🚧 Interaktive Charts werden in einem zukünftigen Update verfügbar sein</p>
+                                    <div class="progress-summary">
+                                        <div class="summary-item">
+                                            <span class="summary-label">Letztes Spiel:</span>
+                                            <span class="summary-value" id="last-game-date">Noch keine Spiele</span>
+                                        </div>
+                                        <div class="summary-item">
+                                            <span class="summary-label">Bester Score:</span>
+                                            <span class="summary-value" id="best-score">0 Punkte</span>
+                                        </div>
+                                        <div class="summary-item">
+                                            <span class="summary-label">Längste Serie:</span>
+                                            <span class="summary-value" id="longest-streak">0 richtig</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ergebnisse Tab -->
+                    <div id="results-tab" class="archive-tab hidden">
+                        <div class="results-header">
+                            <div class="search-filters">
+                                <div class="filter-group">
+                                    <label for="game-filter">🎮 Spiel:</label>
+                                    <select id="game-filter" onchange="applyFilters()">
+                                        <option value="all">Alle Spiele</option>
+                                        <option value="Erd Addition">Erd Addition</option>
+                                    </select>
+                                </div>
+                                <div class="filter-group">
+                                    <label for="mode-filter">🎯 Modus:</label>
+                                    <select id="mode-filter" onchange="applyFilters()">
+                                        <option value="all">Alle Modi</option>
+                                        <option value="Anfänger">Anfänger</option>
+                                        <option value="Fortgeschritten">Fortgeschritten</option>
+                                        <option value="Experte">Experte</option>
+                                        <option value="Herausforderung">Herausforderung</option>
+                                    </select>
+                                </div>
+                                <div class="filter-group">
+                                    <label for="date-filter">📅 Zeitraum:</label>
+                                    <select id="date-filter" onchange="applyFilters()">
+                                        <option value="all">Alle Zeiten</option>
+                                        <option value="today">Heute</option>
+                                        <option value="week">Diese Woche</option>
+                                        <option value="month">Dieser Monat</option>
+                                    </select>
+                                </div>
+                                <div class="filter-actions">
+                                    <button class="filter-btn" onclick="clearFilters()">
+                                        <span class="button-icon">🔄</span>
+                                        <span class="button-text">Zurücksetzen</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="results-table-container">
+                            <div class="table-header">
+                                <h3>🎯 Spielergebnisse</h3>
+                                <div class="table-info">
+                                    <span id="results-count">0 Ergebnisse</span>
+                                </div>
+                            </div>
+                            <div class="results-table" id="results-table">
+                                <!-- Wird dynamisch gefüllt -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Statistiken Tab -->
+                    <div id="statistics-tab" class="archive-tab hidden">
+                        <div class="statistics-grid">
+                            <div class="stats-section">
+                                <h3>🎮 Spiel-Statistiken</h3>
+                                <div class="detailed-stats">
+                                    <div class="stats-row">
+                                        <span class="stats-label">Häufigstes Spiel:</span>
+                                        <span class="stats-value" id="most-played-game">Erd Addition</span>
+                                    </div>
+                                    <div class="stats-row">
+                                        <span class="stats-label">Lieblings-Modus:</span>
+                                        <span class="stats-value" id="favorite-mode">Noch keine Daten</span>
+                                    </div>
+                                    <div class="stats-row">
+                                        <span class="stats-label">Durchschnittliche Spieldauer:</span>
+                                        <span class="stats-value" id="avg-game-duration">0 Sekunden</span>
+                                    </div>
+                                    <div class="stats-row">
+                                        <span class="stats-label">Beste Tageszeit:</span>
+                                        <span class="stats-value" id="best-time-of-day">Noch keine Daten</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="stats-section">
+                                <h3>📊 Leistungs-Analyse</h3>
+                                <div class="detailed-stats">
+                                    <div class="stats-row">
+                                        <span class="stats-label">Beste Genauigkeit:</span>
+                                        <span class="stats-value" id="best-accuracy">0%</span>
+                                    </div>
+                                    <div class="stats-row">
+                                        <span class="stats-label">Durchschnitts-Level:</span>
+                                        <span class="stats-value" id="avg-level">Level 1</span>
+                                    </div>
+                                    <div class="stats-row">
+                                        <span class="stats-label">Verbesserung/Woche:</span>
+                                        <span class="stats-value" id="weekly-improvement">+0%</span>
+                                    </div>
+                                    <div class="stats-row">
+                                        <span class="stats-label">Konsistenz-Rating:</span>
+                                        <span class="stats-value" id="consistency-rating">⭐⭐⭐⭐⭐</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="stats-section">
+                                <h3>🏆 Erfolge & Meilensteine</h3>
+                                <div class="achievements-grid">
+                                    <div class="achievement-item" id="first-game-achievement">
+                                        <div class="achievement-icon">🎮</div>
+                                        <div class="achievement-content">
+                                            <div class="achievement-name">Erstes Spiel</div>
+                                            <div class="achievement-desc">Spiele dein erstes Erd Addition</div>
+                                        </div>
+                                        <div class="achievement-status locked">🔒</div>
+                                    </div>
+                                    <div class="achievement-item" id="score-100-achievement">
+                                        <div class="achievement-icon">🎯</div>
+                                        <div class="achievement-content">
+                                            <div class="achievement-name">Punktesammler</div>
+                                            <div class="achievement-desc">Erreiche 100 Punkte in einem Spiel</div>
+                                        </div>
+                                        <div class="achievement-status locked">🔒</div>
+                                    </div>
+                                    <div class="achievement-item" id="streak-10-achievement">
+                                        <div class="achievement-icon">🔥</div>
+                                        <div class="achievement-content">
+                                            <div class="achievement-name">Feuerstreifen</div>
+                                            <div class="achievement-desc">Erreiche eine Serie von 10</div>
+                                        </div>
+                                        <div class="achievement-status locked">🔒</div>
+                                    </div>
+                                    <div class="achievement-item" id="daily-player-achievement">
+                                        <div class="achievement-icon">📅</div>
+                                        <div class="achievement-content">
+                                            <div class="achievement-name">Täglicher Spieler</div>
+                                            <div class="achievement-desc">Spiele 7 Tage in Folge</div>
+                                        </div>
+                                        <div class="achievement-status locked">🔒</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Export Tab (Liste 5) -->
+                    <div id="export-tab" class="archive-tab hidden">
+                        <div class="export-section">
+                            <div class="export-header">
+                                <h3>📁 Liste 5 - Individueller Fortschritt</h3>
+                                <p class="export-description">
+                                    Exportiere deine persönlichen Spielergebnisse und Fortschrittsdaten als downloadbare Datei.
+                                    Diese "Liste 5" enthält alle deine Spiel-Statistiken in einem strukturierten Format.
+                                </p>
+                            </div>
+
+                            <div class="export-options">
+                                <div class="export-formats">
+                                    <h4>📄 Export-Formate</h4>
+                                    <div class="format-grid">
+                                        <div class="format-card" onclick="exportData('json')">
+                                            <div class="format-icon">📊</div>
+                                            <div class="format-name">JSON</div>
+                                            <div class="format-desc">Strukturierte Daten für Entwickler</div>
+                                        </div>
+                                        <div class="format-card" onclick="exportData('csv')">
+                                            <div class="format-icon">📋</div>
+                                            <div class="format-name">CSV</div>
+                                            <div class="format-desc">Tabelle für Excel/Sheets</div>
+                                        </div>
+                                        <div class="format-card" onclick="exportData('txt')">
+                                            <div class="format-icon">📝</div>
+                                            <div class="format-name">TXT</div>
+                                            <div class="format-desc">Einfacher Text-Report</div>
+                                        </div>
+                                        <div class="format-card" onclick="exportData('html')">
+                                            <div class="format-icon">🌐</div>
+                                            <div class="format-name">HTML</div>
+                                            <div class="format-desc">Interaktiver Web-Report</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="export-preview">
+                                    <h4>👁️ Datenvorschau</h4>
+                                    <div class="preview-container">
+                                        <div class="preview-stats">
+                                            <div class="preview-item">
+                                                <span class="preview-label">Benutzer:</span>
+                                                <span class="preview-value" id="export-username">Nicht angemeldet</span>
+                                            </div>
+                                            <div class="preview-item">
+                                                <span class="preview-label">Erstellungsdatum:</span>
+                                                <span class="preview-value" id="export-date">19.10.2025</span>
+                                            </div>
+                                            <div class="preview-item">
+                                                <span class="preview-label">Enthaltene Spiele:</span>
+                                                <span class="preview-value" id="export-games-count">0 Spiele</span>
+                                            </div>
+                                            <div class="preview-item">
+                                                <span class="preview-label">Datengröße:</span>
+                                                <span class="preview-value" id="export-size">~0 KB</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="export-actions">
+                                    <button class="export-btn primary" onclick="exportAllData()">
+                                        <span class="button-icon">📦</span>
+                                        <span class="button-text">Vollständigen Export erstellen</span>
+                                    </button>
+                                    <button class="export-btn secondary" onclick="showExportHistory()">
+                                        <span class="button-icon">📚</span>
+                                        <span class="button-text">Export-Verlauf anzeigen</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- LEVEL-TOOLS: Tools Bereich -->
+            
+        </main>
+
+        <!-- Footer mit wichtigen Informationen -->
+        <footer id="main-footer">
+            <p>&copy; 2025 NeuroGames - Horizon Research UG</p>
+            <p>Gespeichert auf GitHub Pages</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript-Datei für alle Funktionalitäten einbinden -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+{
+  "description": "NeuroGames Beispiel-Benutzerdaten",
+  "version": "1.0",
+  "users": [
+    {
+      "id": 1698000000000,
+      "name": "TestSpieler",
+      "password": "test123",
+      "registrationDate": "2025-10-19T10:00:00.000Z",
+      "gameResults": [
+        {
+          "id": "result_1",
+          "game": "Erd Addition",
+          "punkte": 85,
+          "uhrzeit": "2025-10-19T10:30:00.000Z",
+          "duration": 120,
+          "level": 1
+        },
+        {
+          "id": "result_2", 
+          "game": "Erd Addition",
+          "punkte": 92,
+          "uhrzeit": "2025-10-19T11:15:00.000Z",
+          "duration": 98,
+          "level": 2
+        }
+      ],
+      "totalGamesPlayed": 2,
+      "bestScore": 92,
+      "preferences": {
+        "theme": "default",
+        "soundEnabled": true,
+        "language": "de"
+      }
+    }
+  ],
+  "metadata": {
+    "created": "2025-10-19T12:00:00.000Z",
+    "lastModified": "2025-10-19T12:00:00.000Z",
+    "format": "neurogames_v1"
+  }
+}

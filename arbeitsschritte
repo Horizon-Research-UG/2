@@ -1,0 +1,215 @@
+# ARBEITSSCHRITTE - NeuroGames Projekt
+## Tickets für OpenAI Software-Arbeiter
+
+---
+
+### TICKET #001: Projektgrundlagen erstellen
+**Priorität:** HOCH
+**Beschreibung:** Grundlegende Projektstruktur für GitHub Pages Setup
+**Aufgaben:**
+- Erstelle index.html als Haupteinstiegspunkt
+- Erstelle styles.css für einheitliches Design
+- Erstelle script.js für JavaScript-Funktionalität
+- Erstelle assets/ Ordner für Bilder und Ressourcen
+- Erstelle data/ Ordner für JSON-Dateispeicherung
+**Anforderungen:** Modularer, minimalistischer Code mit selbsterklärenden Kommentaren
+
+---
+
+### TICKET #002: Ebene 1 - Login/Registrierung Interface
+**Priorität:** HOCH
+**Beschreibung:** Haupteinstieg mit zwei Optionen (Einloggen, Registrieren)
+**Aufgaben:**
+- Erstelle Startseite mit zwei Button-Optionen
+- Design: Minimalistisch, benutzerfreundlich
+- Navigation zu Ebene 2a (Einloggen) und Ebene 2b (Registrieren)
+**Dateien:** index.html, styles.css, script.js
+
+---
+
+### TICKET #003: Ebene 2a - Einloggen Formular
+**Priorität:** HOCH
+**Beschreibung:** Login-Formular mit Name und Zauberwort
+**Aufgaben:**
+- Input-Felder für "Name" und "Zauberwort"
+- Validierung der Eingaben
+- Weiterleitung zu Ebene 3 (Hauptmenü) nach erfolgreichem Login
+- Lokale Speicherung der Benutzerdaten
+**Anforderungen:** Jeder User-Move muss getrackt werden
+
+---
+
+### TICKET #004: Ebene 2b - Registrierung Formular
+**Priorität:** HOCH
+**Beschreibung:** Registrierungs-Formular für neue Benutzer
+**Aufgaben:**
+- Input-Felder für "Name" und "Zauberwort"
+- Validierung: Name bereits vorhanden, Zauberwort-Stärke
+- Speicherung neuer Benutzer in data/users.json
+- Automatische Weiterleitung zu Ebene 3 nach Registrierung
+**Anforderungen:** Modulare Benutzerverwaltung
+
+---
+
+### TICKET #005: Ebene 3 - Hauptmenü Interface
+**Priorität:** HOCH
+**Beschreibung:** Hauptnavigation mit drei Bereichen
+**Aufgaben:**
+- Button/Navigation für "Spielen" (zu Ebene 3a)
+- Button/Navigation für "Tools" 
+- Button/Navigation für "Archiv" (zu Ebene 5)
+- User-Info Display (eingeloggter Name)
+- Logout-Funktionalität
+**Design:** Übersichtlich, alle Bereiche klar erkennbar
+
+---
+
+### TICKET #006: Ebene 3a - Spielbereich
+**Priorität:** HOCH
+**Beschreibung:** Spiele-Übersicht und Auswahl
+**Aufgaben:**
+- Liste aller verfügbaren Spiele:
+  * Game 1 (zu definieren)
+  * Game 2 (zu definieren)
+  * Erd Addition (Hauptfokus, zu Ebene 4)
+- Button für "Vorschläge machen" (zu Ebene 3a1)
+- Zurück-Navigation zum Hauptmenü
+**Anforderungen:** Erweiterbar für zukünftige Spiele
+
+---
+
+### TICKET #007: Ebene 3a1 - Vorschläge System
+**Priorität:** MITTEL
+**Beschreibung:** Community-Features für User-Beiträge
+**Aufgaben:**
+- Text schreiben: Textarea für Textvorschläge
+- Ordner hochladen: File-Upload für Ordnerstrukturen
+- Dokument hochladen: File-Upload für einzelne Dateien
+- Umfrage teilnehmen: Interface für bestehende Umfragen
+- Speicherung aller Beiträge in data/suggestions.json
+**Anforderungen:** Alle User-Aktionen tracken und speichern
+
+---
+
+### TICKET #008: Ebene 4 - "Erd Addition" Hauptspiel
+**Priorität:** SEHR HOCH
+**Beschreibung:** Hauptspiel-Implementation
+**Aufgaben:**
+- Spiellogik für "Erd Addition" entwickeln
+- Score-System implementieren
+- Timer-Modul für Uhrzeit-Tracking
+- Ergebnis-Speicherung nach jedem Spiel
+- Integration mit Archiv-System (Liste 1-5)
+**Datenstruktur:** punkte, game, name, uhrzeit pro Ergebnis
+
+---
+
+### TICKET #009: Ebene 5 - Archiv-System
+**Priorität:** HOCH
+**Beschreibung:** Statistik- und Ergebnis-Verwaltung
+**Aufgaben:**
+- Liste 1: Die besten 3 Ergebnisse (Highscore)
+- Liste 2: Die letzten 10 Ergebnisse (Verlauf)
+- Liste 3: Alle Ergebnisse (Komplettübersicht)
+- Liste 4: Alle Spieler (Benutzerstatistik)
+- Liste 5: Individueller Verlauf (Download/Upload-fähig)
+**Datenformat:** JSON für alle Listen
+
+---
+
+### TICKET #010: Liste 5 - Spielstand-System (KRITISCH)
+**Priorität:** SEHR HOCH
+**Beschreibung:** Download/Upload-System für individuellen Verlauf
+**Aufgaben:**
+- Liste 5 als separates JSON-Dokument strukturieren
+- Download-Funktion: Exportiert komplette Spielerdaten
+- Upload-Funktion: Importiert Spielerdaten und führt sie zusammen
+- Datenvalidierung beim Upload
+- Backup-Mechanismus für Datenverlust-Prävention
+**ACHTUNG:** Spezielles Format beachten - muss jederzeit portierbar sein
+
+---
+
+### TICKET #011: User-Tracking System
+**Priorität:** SEHR HOCH
+**Beschreibung:** Vollständiges Tracking aller Benutzeraktionen
+**Aufgaben:**
+- Tracking-Modul entwickeln
+- Jeder Klick, jede Eingabe, jede Navigation loggen
+- Timestamp für alle Aktionen
+- Speicherung in data/tracking.json
+- Privacy-konforme Implementierung
+**Anforderungen:** JEDER Move des Users muss gespeichert werden
+
+---
+
+### TICKET #012: GitHub Pages Deployment
+**Priorität:** HOCH
+**Beschreibung:** Deployment-Konfiguration für GitHub Pages
+**Aufgaben:**
+- GitHub Actions für automatisches Deployment
+- Korrekte Pfad-Konfiguration für GitHub Pages
+- HTTPS-Konfiguration
+- Domain-Setup (falls erforderlich)
+**Ziel:** Vollständig funktionsfähige Web-App über GitHub Pages
+
+---
+
+### TICKET #013: Tools-Bereich (zu definieren)
+**Priorität:** NIEDRIG
+**Beschreibung:** Tools-Sektion aus Hauptmenü
+**Aufgaben:**
+- Anforderungen klären
+- Interface entwerfen
+- Funktionalitäten implementieren
+**Status:** Wartet auf weitere Spezifikationen
+
+---
+
+### TICKET #014: Code-Qualität & Dokumentation
+**Priorität:** HOCH
+**Beschreibung:** Code-Standards und Dokumentation
+**Aufgaben:**
+- Jede Zeile Code kommentieren (selbsterklärende Kommentare)
+- Modulare Struktur sicherstellen
+- Minimalistischer Code-Ansatz
+- Easy anpassbar für zukünftige Erweiterungen
+- README.md mit vollständiger Projektdokumentation
+**Anforderungen:** Maximale Modularität, Minimalismus, Zukunftssicherheit
+
+---
+
+### TICKET #015: Testing & Qualitätssicherung
+**Priorität:** MITTEL
+**Beschreibung:** Umfassende Tests aller Funktionen
+**Aufgaben:**
+- Login/Registrierung testen
+- Alle Navigations-Pfade testen
+- Spiel-Funktionalität testen
+- Download/Upload-System testen
+- Cross-Browser-Kompatibilität
+- Mobile Responsive Design
+
+---
+
+## ARBEITSREIHENFOLGE (Empfohlen):
+1. TICKET #001 (Projektgrundlagen)
+2. TICKET #002 (Login-Interface)
+3. TICKET #003 & #004 (Login/Registrierung)
+4. TICKET #005 (Hauptmenü)
+5. TICKET #011 (User-Tracking)
+6. TICKET #008 (Erd Addition Spiel)
+7. TICKET #009 & #010 (Archiv-System)
+8. TICKET #006 & #007 (Spielbereich & Vorschläge)
+9. TICKET #012 (GitHub Pages Deployment)
+10. TICKET #014 & #015 (Qualität & Testing)
+
+---
+
+## WICHTIGE HINWEISE:
+- IMMER zuerst base-Dokument 100x lesen
+- Jede Zeile selbsterklärend kommentieren  
+- Modularer, minimalistischer Code
+- Alle User-Moves tracken
+- Liste 5 Format besonders beachten
+- GitHub Pages kompatibel entwickeln

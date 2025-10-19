@@ -1,0 +1,102 @@
+{
+  "name": "MaxMustermann",
+  "email": "max.mustermann@example.com",
+  "passwordHash": "hashed_password_example",
+  "registrationDate": "2025-10-19T08:30:00.000Z",
+  "lastLogin": "2025-10-19T14:45:00.000Z",
+  "totalGamesPlayed": 25,
+  "totalScore": 3450,
+  "gameResults": [
+    {
+      "game": "Erd Addition",
+      "modus": "Anfänger",
+      "punkte": 150,
+      "zeit": 180,
+      "richtige": 15,
+      "falsche": 2,
+      "level": 2,
+      "genauigkeit": 88,
+      "maxStreak": 12,
+      "datum": "2025-10-19T09:00:00.000Z"
+    },
+    {
+      "game": "Erd Addition",
+      "modus": "Fortgeschritten",
+      "punkte": 280,
+      "zeit": 115,
+      "richtige": 18,
+      "falsche": 3,
+      "level": 3,
+      "genauigkeit": 86,
+      "maxStreak": 9,
+      "datum": "2025-10-19T10:15:00.000Z"
+    },
+    {
+      "game": "Erd Addition",
+      "modus": "Experte",
+      "punkte": 420,
+      "zeit": 85,
+      "richtige": 22,
+      "falsche": 1,
+      "level": 4,
+      "genauigkeit": 96,
+      "maxStreak": 18,
+      "datum": "2025-10-19T11:30:00.000Z"
+    },
+    {
+      "game": "Erd Addition",
+      "modus": "Herausforderung",
+      "punkte": 380,
+      "zeit": 58,
+      "richtige": 19,
+      "falsche": 2,
+      "level": 3,
+      "genauigkeit": 90,
+      "maxStreak": 15,
+      "datum": "2025-10-19T14:00:00.000Z"
+    }
+  ],
+  "achievements": [
+    {
+      "id": "first-game",
+      "name": "Erstes Spiel",
+      "description": "Spiele dein erstes Erd Addition",
+      "unlockedDate": "2025-10-19T09:00:00.000Z"
+    },
+    {
+      "id": "score-100",
+      "name": "Punktesammler",
+      "description": "Erreiche 100 Punkte in einem Spiel",
+      "unlockedDate": "2025-10-19T09:00:00.000Z"
+    },
+    {
+      "id": "streak-10",
+      "name": "Feuerstreifen",
+      "description": "Erreiche eine Serie von 10",
+      "unlockedDate": "2025-10-19T09:00:00.000Z"
+    }
+  ],
+  "preferences": {
+    "theme": "default",
+    "soundEnabled": true,
+    "animationsEnabled": true,
+    "autoExportEnabled": false
+  },
+  "statistics": {
+    "averageAccuracy": 90,
+    "bestScore": 420,
+    "totalCorrectAnswers": 74,
+    "totalWrongAnswers": 8,
+    "averageGameDuration": 109.5,
+    "favoriteGameMode": "Experte",
+    "playTimeByDay": {
+      "monday": 0,
+      "tuesday": 0,
+      "wednesday": 0,
+      "thursday": 0,
+      "friday": 438,
+      "saturday": 0,
+      "sunday": 0
+    }
+  }
+}

@@ -1,0 +1,78 @@
+bitte immer als erstes 100 mal das base dokument zeile für zeile lesen
+flowchart Neurogames:
+
+ebene 1: einloggen, registieren
+
+ebene 2a: (einloggen)
+name
+zauberwort
+einloggen -> 
+
+ebene 2b: (registieren)
+name
+zauberwort
+registieren -> 
+
+ebene 3: Hauptmenü
+spielen
+tools
+Archiv
+
+ebene 3a: spielen
+Game 1
+Game 2
+Erd addtion
+vorschläge machen
+
+ebene 3a1: vorschläge machen
+text schreiben
+ordner hochladen
+dokument hochladen
+an umfrage teilnehmen
+
+ebene 4: spielen
+-> erd addtion
+
+ebene 5: (archiv)
+liste 1
+liste 2
+liste 3
+liste 4
+
+liste 1: die besten 3 ergebnisse
+liste 2: die letzten 10 ergebnisse
+liste 3: alle ergebnisse
+liste 4: aller spieler
+liste 5: individueller Verlauf
+
+Item 1: Erginisse
+punkte (je nach game)
+game ( je nach game)
+name (siehe ebene 2a)
+uhrzeit (per modul laden)
+
+
+---
+
+das projekt soll über github pages laufen
+das fundament und alle relevanten daten sollen in VS code über github gespeichert schreiben
+achtung bei format der datei lsite 5 
+anforderungen:
+jeder move des users soll gespeichert werden
+liste 5 soll ein dokument sein
+liste 5 soll jederzeit hoch und runtergeladen werden können, wie eine spielstand karte
+liste 5 download speichert alle daten
+liste 5 upload einloggen und zugriff auf alle bisherigen daten und anknüpfung
+
+
+
+
+
+---
+
+anforderungen an den code:
+bitte immer als erstes 100 mal das base dokument zeile für zeile lesen
+jede zeile soll verständlich in selbsterklärenden worten kommentiert werden
+der code soll maximal modular
+minimalistisch
+zukünftig easy anpassbar sein
