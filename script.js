@@ -24,6 +24,16 @@ const STORAGE_KEYS = {
 document.addEventListener('DOMContentLoaded', function() {
     console.log('🧠 NeuroGames wird initialisiert...');
     
+    // Stelle sicher, dass alle Funktionen global verfügbar sind
+    window.showLevel = showLevel;
+    window.logout = logout;
+    window.togglePassword = togglePassword;
+    window.showQuestManager = showQuestManager;
+    window.showDashboardCustomizer = showDashboardCustomizer;
+    window.startGame = startGame;
+    window.showSettings = showSettings;
+    window.showProgressOverview = showProgressOverview;
+    
     // Prüfe, ob Benutzer bereits eingeloggt ist
     checkUserLogin();
     
@@ -39,7 +49,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialisiere UI-Effekte und Animationen
     setTimeout(initializeUIEffects, 500);
     
+    // Zusätzliche Fallback Event-Listener für Buttons
+    initializeClickListeners();
+    
     console.log('✅ NeuroGames erfolgreich initialisiert');
+    console.log('🔧 Funktionen global verfügbar gemacht');
 });
 
 /* ====================================
@@ -242,7 +256,6 @@ function showLevel(levelId) {
     } else {
         console.error(`❌ Ebene ${levelId} nicht gefunden`);
     }
-}
 }
 
 // Aktualisiert die Benutzeranzeige im Hauptmenü
@@ -2551,4 +2564,31 @@ if (window.location.hostname === 'localhost' || window.location.hostname === '12
     
     console.log('🔧 Debug-Funktionen aktiviert (localhost)');
     console.log('Verfügbare Funktionen: debugShowAllData(), debugClearAllData(), exportTrackingData()');
+}
+
+/* ====================================
+   ZUSÄTZLICHE CLICK-LISTENER FÜR FALLBACK
+   ==================================== */
+
+// Initialisiert zusätzliche Event-Listener für alle interaktiven Elemente
+function initializeClickListeners() {
+    console.log('🖱️ Initialisiere zusätzliche Click-Listener...');
+    
+    // Fallback für alle onclick-Attribute im HTML
+    document.querySelectorAll('[onclick]').forEach(element => {
+        const onclickValue = element.getAttribute('onclick');
+        console.log(`🔗 Backup-Listener für: ${onclickValue}`);
+        
+        element.addEventListener('click', function(e) {
+            console.log(`🖱️ Click erfasst: ${onclickValue}`);
+            try {
+                // Führe die onclick-Funktion aus
+                eval(onclickValue);
+            } catch (error) {
+                console.error(`❌ Fehler beim Ausführen: ${onclickValue}`, error);
+            }
+        });
+    });
+    
+    console.log('✅ Click-Listener initialisiert');
 }
