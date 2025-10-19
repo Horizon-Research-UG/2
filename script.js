@@ -53,6 +53,13 @@ function checkUserLogin() {
     // Lade gespeicherte Benutzerdaten aus dem Lokalspeicher
     const savedUser = localStorage.getItem(STORAGE_KEYS.currentUser);
     
+    // Zunächst alle Ebenen verstecken und Level 1 als Standardwert anzeigen
+    const allLevels = document.querySelectorAll('.game-level');
+    allLevels.forEach(level => {
+        level.classList.remove('active');
+        level.classList.add('hidden');
+    });
+    
     if (savedUser) {
         // Benutzer ist bereits eingeloggt
         currentUser = JSON.parse(savedUser);
@@ -182,69 +189,60 @@ function showLevel(levelId) {
         username: currentUser?.name 
     });
     
-    // Verstecke alle Ebenen mit Fade-Out Animation
+    // Verstecke alle Ebenen sofort
     const allLevels = document.querySelectorAll('.game-level');
     allLevels.forEach(level => {
-        if (level.classList.contains('active')) {
-            // Füge Fade-Out Klasse hinzu
-            level.classList.add('fade-out');
-            
-            // Nach Animation: verstecken
-            setTimeout(() => {
-                level.classList.remove('active', 'fade-out');
-                level.classList.add('hidden');
-            }, 300);
-        }
+        level.classList.remove('active', 'fade-in', 'fade-out');
+        level.classList.add('hidden');
     });
     
-    // Zeige gewünschte Ebene mit Fade-In nach kurzer Verzögerung
-    setTimeout(() => {
-        const targetLevel = document.getElementById(levelId);
-        if (targetLevel) {
-            targetLevel.classList.remove('hidden');
-            targetLevel.classList.add('active', 'fade-in');
-            currentLevel = levelId;
+    // Zeige gewünschte Ebene sofort
+    const targetLevel = document.getElementById(levelId);
+    if (targetLevel) {
+        targetLevel.classList.remove('hidden');
+        targetLevel.classList.add('active', 'fade-in');
+        currentLevel = levelId;
+        
+        // Entferne Fade-In Klasse nach Animation
+        setTimeout(() => {
+            targetLevel.classList.remove('fade-in');
+        }, 500);
+        
+        // Aktualisiere Benutzeranzeige falls auf Hauptmenü
+        if (levelId === 'level-3') {
+            updateUserDisplay();
             
-            // Entferne Fade-In Klasse nach Animation
+            // Starte Dashboard-Animationen
             setTimeout(() => {
-                targetLevel.classList.remove('fade-in');
+                animateQuestProgress();
+                animateStatCounters();
             }, 500);
-            
-            // Aktualisiere Benutzeranzeige falls auf Hauptmenü
-            if (levelId === 'level-3') {
-                updateUserDisplay();
-                
-                // Starte Dashboard-Animationen
-                setTimeout(() => {
-                    animateQuestProgress();
-                    animateStatCounters();
-                }, 500);
-            }
-            
-            // Spezielle Animationen für Ebene 1
-            if (levelId === 'level-1') {
-                triggerWelcomeAnimations();
-            }
-            
-            // Spielbereich-Initialisierung
-            if (levelId === 'level-3a') {
-                updateGamesStats();
-                setTimeout(animateStatCounters, 300);
-            }
-            
-            // Vorschläge-System Initialisierung
-            if (levelId === 'level-3a1') {
-                showSuggestionTab('text-suggestions');
-            }
-            
-            // Archiv-System Initialisierung
-            if (levelId === 'level-5') {
-                showArchiveTab('overview');
-            }
-        } else {
-            console.error(`❌ Ebene ${levelId} nicht gefunden`);
         }
-    }, 150);
+        
+        // Spezielle Animationen für Ebene 1
+        if (levelId === 'level-1') {
+            triggerWelcomeAnimations();
+        }
+        
+        // Spielbereich-Initialisierung
+        if (levelId === 'level-3a') {
+            updateGamesStats();
+            setTimeout(animateStatCounters, 300);
+        }
+        
+        // Vorschläge-System Initialisierung
+        if (levelId === 'level-3a1') {
+            showSuggestionTab('text-suggestions');
+        }
+        
+        // Archiv-System Initialisierung
+        if (levelId === 'level-5') {
+            showArchiveTab('overview');
+        }
+    } else {
+        console.error(`❌ Ebene ${levelId} nicht gefunden`);
+    }
+}
 }
 
 // Aktualisiert die Benutzeranzeige im Hauptmenü

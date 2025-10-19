@@ -123,12 +123,14 @@ body {
 
 /* Versteckte Ebenen (werden über JavaScript gesteuert) */
 .game-level.hidden {
-    display: none;
+    display: none !important;
+    opacity: 0;
 }
 
 /* Aktive Ebene (sichtbar) */
 .game-level.active {
-    display: block;
+    display: block !important;
+    opacity: 1;
     animation: fadeIn 0.5s ease-in;
 }
 
